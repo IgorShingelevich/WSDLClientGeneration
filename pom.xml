@@ -12,6 +12,7 @@
         <module>wsdlApacheAxis</module>
         <module>TempConv</module>
         <module>NumberConv</module>
+        <module>mobile-stubs</module>
     </modules>
 
     <properties>
