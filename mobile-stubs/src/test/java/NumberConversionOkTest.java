@@ -86,6 +86,10 @@ class NumberConversionOkTest extends WebServiceGatewaySupport {
                             throw new RuntimeException(e);
                         }
                         saajMessage.setSoapAction("http://www.dataaccess.com/webservicesserver/NumberToWords");
+
+                        //set JWT token
+                        String jwtToken = "tokenHere";
+                        saajMessage.getSaajMessage().getMimeHeaders().addHeader("Authorization", "Bearer "+jwtToken);
                     }
                 },
                 message -> {
