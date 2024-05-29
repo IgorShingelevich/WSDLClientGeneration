@@ -35,6 +35,12 @@
             </exclusions>
         </dependency>
 
+      <!--  <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>-->
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -119,6 +125,9 @@
             <artifactId>assertj-core</artifactId>
             <version>3.21.0</version>
         </dependency>
+
+
+
     </dependencies>
 
     <build>
@@ -138,12 +147,6 @@
                         <url>https://${host}/${pathWsdl}</url>
                     </urls>
 
-                    <!--<mappings>
-                        <mapping>
-                            <namespace>https://www.dataaccess.com/webservicesserver/</namespace>
-                            <targetPackage>com.dataaccess.numberconversion</targetPackage>
-                        </mapping>
-                    </mappings>-->
 
                 </configuration>
                 <executions>

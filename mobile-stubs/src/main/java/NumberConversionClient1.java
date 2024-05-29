@@ -1,25 +1,16 @@
+package com.example; // Replace with your package name
 
-import com.dataaccess.www.webservicesserver.NumberConversion;
 import com.dataaccess.www.webservicesserver.NumberConversionLocator;
 import com.dataaccess.www.webservicesserver.NumberConversionSoapType;
-import org.apache.axis.client.Call;
-import org.apache.axis.client.Service;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
-import org.springframework.ws.transport.http.HttpComponentsMessageSender;
 
-import javax.xml.namespace.QName;
 import javax.xml.rpc.ServiceException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.RemoteException;
 
-public class NumberConversionClient extends WebServiceGatewaySupport {
+public class NumberConversionClient1 extends WebServiceGatewaySupport {
     public static void main(String[] args) {
-        NumberConversionClient client = new NumberConversionClient();
-        client.invokeWebService();
-    }
-
-    private void invokeWebService() {
         try {
             // Create the service locator
             NumberConversionLocator locator = new NumberConversionLocator();
@@ -39,13 +30,5 @@ public class NumberConversionClient extends WebServiceGatewaySupport {
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    protected void initGateway() {
-        // Configure the WebServiceTemplate
-        getWebServiceTemplate().setMessageSender(new HttpComponentsMessageSender());
-        getWebServiceTemplate().setMarshaller(new org.springframework.oxm.jaxb.Jaxb2Marshaller());
-        getWebServiceTemplate().setUnmarshaller(new org.springframework.oxm.jaxb.Jaxb2Marshaller());
     }
 }
