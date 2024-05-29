@@ -1,3 +1,6 @@
+### Local ###
+/mobile-stubs/allure-results/
+/.idea/
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -37,6 +40,4 @@ build/
 ### Mac OS ###
 .DS_Store
 
-### Local ###
-/mobile-stubs/allure-results/
-/.idea/
+
